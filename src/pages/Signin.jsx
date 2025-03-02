@@ -34,7 +34,8 @@ const Signin = () => {
         dispatch(signin(response.data.user));
         localStorage.setItem("token", JSON.stringify(response.data.token));
         toast.success("Login successful!");
-        navigate("/");
+        // navigate("/");
+        window.location.href="/"
       } else {
         toast.error(response.data.message || "Invalid credentials");
       }

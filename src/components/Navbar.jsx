@@ -11,6 +11,8 @@ const Navbar = () => {
 
   const logoutUser = () => {
     toast.success('Logout Successfully')
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     navigate('/signin')
     dispatch(signout());
   }
